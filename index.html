@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mostafa's Links | الروابط الاجتماعية</title>
+  <title>كودي ينجم | روابطي الاجتماعية</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
-      --primary: #4361ee;
-      --secondary: #3f37c9;
-      --dark: #1b263b;
+      --primary: #6a11cb;
+      --secondary: #2575fc;
+      --dark: #1a1a2e;
       --light: #f8f9fa;
-      --accent: #f72585;
+      --text: #e6e6e6;
     }
     
     * {
@@ -21,9 +21,9 @@
     }
     
     body {
-      font-family: 'Tajawal', 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, var(--dark), #2b2d42);
-      color: var(--light);
+      font-family: 'Tajawal', sans-serif;
+      background: linear-gradient(to right, var(--dark), #16213e);
+      color: var(--text);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -31,55 +31,33 @@
       justify-content: center;
       padding: 20px;
       text-align: center;
-      line-height: 1.6;
+      line-height: 1.8;
     }
     
-    .profile {
-      position: relative;
+    .header {
       margin-bottom: 30px;
+      width: 100%;
     }
     
-    .profile-pic {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--primary);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
-    }
-    
-    .profile-pic:hover {
-      transform: scale(1.05);
-    }
-    
-    .verified-badge {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      background: var(--primary);
-      color: white;
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      border: 2px solid var(--dark);
-    }
-    
-    h1 {
-      font-size: 1.8rem;
+    .title {
+      font-size: 2.2rem;
       margin-bottom: 10px;
-      color: white;
+      background: linear-gradient(to right, #ff8a00, #da1b60);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
     }
     
-    .bio {
-      max-width: 500px;
-      margin: 0 auto 25px;
+    .subtitle {
+      font-size: 1.1rem;
       opacity: 0.9;
-      font-size: 0.95rem;
+      margin-bottom: 5px;
+    }
+    
+    .welcome {
+      font-size: 0.9rem;
+      opacity: 0.7;
+      margin-bottom: 20px;
     }
     
     .links {
@@ -88,72 +66,54 @@
     }
     
     .link {
-      display: flex;
-      align-items: center;
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.1);
-      padding: 15px 20px;
+      display: block;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 18px;
       margin-bottom: 15px;
-      border-radius: 12px;
+      border-radius: 15px;
       text-decoration: none;
-      color: white;
+      color: var(--text);
       transition: all 0.3s ease;
-      transform: translateY(0);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
     }
     
     .link:hover {
-      background: rgba(255,255,255,0.2);
+      background: rgba(255, 255, 255, 0.15);
       transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
     
-    .link-icon {
-      width: 30px;
-      height: 30px;
-      margin-left: 15px;
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      background: var(--primary);
-      color: white;
-    }
-    
-    .link-content {
-      flex: 1;
-      text-align: right;
+    .link::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--primary), var(--secondary));
     }
     
     .link-title {
-      font-weight: 600;
+      font-weight: 700;
+      font-size: 1.2rem;
       display: block;
+      margin-bottom: 5px;
     }
     
     .link-desc {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       opacity: 0.7;
       display: block;
     }
     
-    .social-links {
-      display: flex;
-      justify-content: center;
-      margin-top: 30px;
-      gap: 15px;
-    }
-    
-    .social-link {
-      color: white;
-      font-size: 1.5rem;
-      opacity: 0.7;
-      transition: all 0.3s ease;
-    }
-    
-    .social-link:hover {
-      opacity: 1;
-      transform: translateY(-3px);
+    .divider {
+      margin: 25px 0;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.1);
+      width: 80%;
+      max-width: 300px;
     }
     
     footer {
@@ -175,81 +135,54 @@
     .link:nth-child(1) { animation-delay: 0.1s; }
     .link:nth-child(2) { animation-delay: 0.2s; }
     .link:nth-child(3) { animation-delay: 0.3s; }
-    .link:nth-child(4) { animation-delay: 0.4s; }
+    .link:nth-child(4) { animation-delay: 0.3s; }
     
     /* Responsive */
     @media (max-width: 600px) {
-      .container {
-        width: 95%;
+      .title {
+        font-size: 1.8rem;
       }
       
-      h1 {
-        font-size: 1.5rem;
+      .subtitle {
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="profile">
-      <img src="icons/profile.jpg" alt="Mostafa" class="profile-pic">
-      <div class="verified-badge">✓</div>
+    <div class="header">
+      <h1 class="title">كودي ينجم</h1>
+      <p class="subtitle">كل الروابط الي محتاجها تحت</p>
+      <p class="welcome">نورت</p>
     </div>
-    
-    <h1>Mostafa</h1>
-    <p class="bio">مرحبًا بكم في صفحتي الرسمية | تابعوني على المنصات الاجتماعية</p>
     
     <div class="links">
       <a href="https://discord.gg/arha" class="link" target="_blank">
-        <div class="link-icon">
-          <i class="fab fa-discord"></i>
-        </div>
-        <div class="link-content">
-          <span class="link-title">سيرفر الديسكورد</span>
-          <span class="link-desc">انضم إلى مجتمعنا</span>
-        </div>
+        <span class="link-title">سيرفر الديسكورد</span>
+        <span class="link-desc">انضم إلى مجتمعنا</span>
       </a>
       
       <a href="https://www.roblox.com/games/14000798392/unnamed" class="link" target="_blank">
-        <div class="link-icon">
-          <i class="fas fa-gamepad"></i>
-        </div>
-        <div class="link-content">
-          <span class="link-title">لعبة روبلوكس</span>
-          <span class="link-desc">تبرع لدعم اللعبة</span>
-        </div>
+        <span class="link-title">ماب التبرع</span>
+        <span class="link-desc">ادعم اللعبة بالتبرع</span>
       </a>
       
       <a href="https://www.roblox.com/communities/16982855/Arabs-Hangout#!/about" class="link" target="_blank">
-        <div class="link-icon">
-          <i class="fas fa-users"></i>
-        </div>
-        <div class="link-content">
-          <span class="link-title">مجموعة روبلوكس</span>
-          <span class="link-desc">Arabs Hangout</span>
-        </div>
+        <span class="link-title">جروب روبلوكس</span>
+        <span class="link-desc">Arabs Hangout</span>
       </a>
       
       <a href="https://www.tiktok.com/@c00dy_" class="link" target="_blank">
-        <div class="link-icon">
-          <i class="fab fa-tiktok"></i>
-        </div>
-        <div class="link-content">
-          <span class="link-title">تيك توك</span>
-          <span class="link-desc">@c00dy_</span>
-        </div>
+        <span class="link-title">حساب التيك توك</span>
+        <span class="link-desc">@c00dy_</span>
       </a>
     </div>
     
-    <div class="social-links">
-      <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-      <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-      <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-      <a href="#" class="social-link"><i class="fab fa-snapchat"></i></a>
-    </div>
+    <div class="divider"></div>
     
     <footer>
-      © 2023 Mostafa. All rights reserved.
+      © 2025 كودي ينجم. جميع الحقوق محفوظة
     </footer>
   </div>
 </body>
