@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mostafa's Links | الروابط الاجتماعية</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #4361ee;
+      --secondary: #3f37c9;
+      --dark: #1b263b;
+      --light: #f8f9fa;
+      --accent: #f72585;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Tajawal', 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, var(--dark), #2b2d42);
+      color: var(--light);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+      line-height: 1.6;
+    }
+    
+    .profile {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    
+    .profile-pic:hover {
+      transform: scale(1.05);
+    }
+    
+    .verified-badge {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: var(--primary);
+      color: white;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      border: 2px solid var(--dark);
+    }
+    
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: white;
+    }
+    
+    .bio {
+      max-width: 500px;
+      margin: 0 auto 25px;
+      opacity: 0.9;
+      font-size: 0.95rem;
+    }
+    
+    .links {
+      width: 100%;
+      max-width: 500px;
+    }
+    
+    .link {
+      display: flex;
+      align-items: center;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: white;
+      transition: all 0.3s ease;
+      transform: translateY(0);
+    }
+    
+    .link:hover {
+      background: rgba(255,255,255,0.2);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .link-icon {
+      width: 30px;
+      height: 30px;
+      margin-left: 15px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      background: var(--primary);
+      color: white;
+    }
+    
+    .link-content {
+      flex: 1;
+      text-align: right;
+    }
+    
+    .link-title {
+      font-weight: 600;
+      display: block;
+    }
+    
+    .link-desc {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      display: block;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 15px;
+    }
+    
+    .social-link {
+      color: white;
+      font-size: 1.5rem;
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+    
+    .social-link:hover {
+      opacity: 1;
+      transform: translateY(-3px);
+    }
+    
+    footer {
+      margin-top: 30px;
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+    
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .link {
+      animation: fadeIn 0.5s ease forwards;
+    }
+    
+    .link:nth-child(1) { animation-delay: 0.1s; }
+    .link:nth-child(2) { animation-delay: 0.2s; }
+    .link:nth-child(3) { animation-delay: 0.3s; }
+    .link:nth-child(4) { animation-delay: 0.4s; }
+    
+    /* Responsive */
+    @media (max-width: 600px) {
+      .container {
+        width: 95%;
+      }
+      
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile">
+      <img src="icons/profile.jpg" alt="Mostafa" class="profile-pic">
+      <div class="verified-badge">✓</div>
+    </div>
+    
+    <h1>Mostafa</h1>
+    <p class="bio">مرحبًا بكم في صفحتي الرسمية | تابعوني على المنصات الاجتماعية</p>
+    
+    <div class="links">
+      <a href="https://discord.gg/arha" class="link" target="_blank">
+        <div class="link-icon">
+          <i class="fab fa-discord"></i>
+        </div>
+        <div class="link-content">
+          <span class="link-title">سيرفر الديسكورد</span>
+          <span class="link-desc">انضم إلى مجتمعنا</span>
+        </div>
+      </a>
+      
+      <a href="https://www.roblox.com/games/14000798392/unnamed" class="link" target="_blank">
+        <div class="link-icon">
+          <i class="fas fa-gamepad"></i>
+        </div>
+        <div class="link-content">
+          <span class="link-title">لعبة روبلوكس</span>
+          <span class="link-desc">تبرع لدعم اللعبة</span>
+        </div>
+      </a>
+      
+      <a href="https://www.roblox.com/communities/16982855/Arabs-Hangout#!/about" class="link" target="_blank">
+        <div class="link-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="link-content">
+          <span class="link-title">مجموعة روبلوكس</span>
+          <span class="link-desc">Arabs Hangout</span>
+        </div>
+      </a>
+      
+      <a href="https://www.tiktok.com/@c00dy_" class="link" target="_blank">
+        <div class="link-icon">
+          <i class="fab fa-tiktok"></i>
+        </div>
+        <div class="link-content">
+          <span class="link-title">تيك توك</span>
+          <span class="link-desc">@c00dy_</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="social-links">
+      <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+      <a href="#" class="social-link"><i class="fab fa-snapchat"></i></a>
+    </div>
+    
+    <footer>
+      © 2023 Mostafa. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
